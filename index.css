@@ -4,6 +4,7 @@ body {
     background-color: #181818;
     color: #E7E7E7;
     overflow-x: hidden;
+    margin: 0;
 }
 
 section {
@@ -72,4 +73,21 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+
+
+.copyright {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.copyright p {
+    font-size: 50%;
+    margin: 5px;
 }
