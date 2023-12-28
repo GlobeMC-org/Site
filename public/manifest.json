@@ -1,0 +1,15 @@
+{
+  "short_name": "GlobeMC",
+  "name": "GlobeMC server",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e7e7e7",
+  "background_color": "#181818"
+}

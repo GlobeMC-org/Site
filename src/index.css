@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fffeff;
+}
+
+code {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+pre {
+  margin: 0;
+  font-size: 3vw;
+}
+
+.typewriter pre {
+  width: 0%;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 0;
+  letter-spacing: .15em;
+  letter-spacing: 2px;
+  animation:
+    typing 750ms steps(40, end),
+    blink-caret .75s step-end infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  0% { width: 0% }
+  100% { width: 105% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
