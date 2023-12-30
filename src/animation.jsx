@@ -1,11 +1,14 @@
 import React from 'react';
 import { useEffect } from 'react';
+import Cookies from 'js-cookie';
+
 import "./animation.css"
 
 const Animation = () => {
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      window.location.href = '/site';
+      Cookies.set("anim", "false", {expires: 7});
+      window.location.href = "/";
     }, 10 * 300 + 1250);
 
     return () => clearTimeout(redirectTimeout);

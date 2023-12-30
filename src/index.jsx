@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import { Outlet } from "react-router-dom";
+
 import Site from "./site.jsx"
 import Animation from './animation.jsx';
 import './nav.scss';
@@ -30,13 +31,11 @@ const App = () => {
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/">
-          <Route index element={<Animation />} />
-        </Route>
-
-        <Route path="/site" element={<Nav />}>
+        <Route path="/" element={<Nav />}>
           <Route index element={<Site />} />
         </Route>
+
+        <Route path="/anim" element={<Animation />}/>
       </Routes>
     </BrowserRouter>
   )
