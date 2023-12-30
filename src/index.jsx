@@ -1,35 +1,44 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { Outlet } from "react-router-dom";
+import Site from "./site.jsx"
+import Animation from './animation.jsx';
+import './nav.scss';
 
-const App = () => {
-  const text = [
-    "      ________      __         __  _________",
-    "    / ____/ /___  / /_  ___  /  |/  / ____/",
-    "  / / __/ / __ \\/ __ \\/ _ \\/ /|_/ / /     ",
-    " / /_/ / / /_/ / /_/ /  __/ /  / / /___   ",
-    " \\____/_/\\____/_.___/\\___/_/  /_/\\____/",
-    " ",
-    " Join us today! play.globemc.org",
-    " ",
-    " * Map: https://map.globemc.org/",
-    " * Discord: LINK",
-    " * Rules: https://globemc.org/rules/",
-    " * Wiki: https://globemc.org/wiki/",
-    " ",
-    " Copyright 2023 Unsafe Software"
-  ];
-
+const Nav = () => {
   return(
     <>
-      <div class="typewriter">
-        {text.map((line, index) => (
-            <pre key={index} style={{ animationDelay: `${index * 750 + 500}ms`, margin: "0 0 0 -1.2vw"}}>
-              {line}
-            </pre>
-          ))}
-      </div>
+      <nav>
+        <ul>
+          <li><b>GlobeMC</b></li>
+          <li>Map</li>
+          <li>Guide</li>
+          <li>Rules</li>
+          <li>Mods</li>
+          <li>Discord</li>
+        </ul>
+      </nav>
+      <main>
+        <Outlet />
+      </main>
     </>
+  )
+}
+
+const App = () => {
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Animation />} />
+        </Route>
+
+        <Route path="/site" element={<Nav />}>
+          <Route index element={<Site />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

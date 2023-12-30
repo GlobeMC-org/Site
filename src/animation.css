@@ -1,0 +1,25 @@
+.typewriter {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fffeff;
+}
+
+.typewriter pre {
+  margin: 0;
+  font-size: 2vw;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 0;
+  letter-spacing: .15em;
+  letter-spacing: 2px;
+  animation:
+    typing 300ms steps(40, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  0% { width: 0% }
+  100% { width: 105% }
+}
