@@ -1,38 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
-import { Outlet } from "react-router-dom";
 
-import Site from "./site.jsx"
-import Animation from './animation.jsx';
+import Animation from "./animation.jsx";
+import Nav from "./nav.jsx"
+import MDR from "./mdr.jsx"
 import './nav.scss';
-
-const Nav = () => {
-  return(
-    <>
-      <nav>
-        <ul>
-          <li><b>GlobeMC</b></li>
-          <li>Map</li>
-          <li>Guide</li>
-          <li>Rules</li>
-          <li>Mods</li>
-          <li>Discord</li>
-        </ul>
-      </nav>
-      <main>
-        <Outlet />
-      </main>
-    </>
-  )
-}
 
 const App = () => {
   return(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route index element={<Site />} />
+          <Route index element={<MDR url={"/mds/home.md"} />} />
+          <Route path="/guide" element={<MDR url={"/mds/guide.md"} />} />
+          <Route path="/rules" element={<MDR url={"/mds/rules.md"} />} />
+          <Route path="/mods" element={<MDR url={"/mds/mods.md"} />} />
+          <Route path="/discord" element={<MDR url={"/mds/discord.md"} />} />
         </Route>
 
         <Route path="/anim" element={<Animation />}/>

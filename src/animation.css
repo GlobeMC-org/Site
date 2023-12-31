@@ -1,5 +1,5 @@
 .typewriter {
-  margin: 0;
+  margin: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fffeff;
@@ -11,7 +11,7 @@
   width: 0%;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 0;
+  margin: 0;
   letter-spacing: .15em;
   letter-spacing: 2px;
   animation:
