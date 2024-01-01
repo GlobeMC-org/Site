@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/guide" element={<MDR url={"/mds/guide.md"} />} />
           <Route path="/rules" element={<MDR url={"/mds/rules.md"} />} />
           <Route path="/mods" element={<MDR url={"/mds/mods.md"} />} />
-          <Route path="/discord" element={<MDR url={"/mds/discord.md"} />} />
+          <Route path="https://discord.gg/eRUHxGECsy" />
         </Route>
 
         <Route path="/anim" element={<Animation />}/>
