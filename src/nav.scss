@@ -39,5 +39,11 @@ nav {
 }
 
 main {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 50px);
+}
+
+.Margin {
     padding: 10px;
 }

@@ -13,15 +13,22 @@ const Discord = () => {
   }, []);
 }
 
+const Map = () => {
+  return(
+    <iframe title="dynmap" src="http://65.108.18.28:25663/" style={{width: "100%", height: "100%"}} frameborder="0" />
+  );
+}
+
 const App = () => {
   return(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route index element={<MDR url={"/mds/home.md"} />} />
-          <Route path="/guide" element={<MDR url={"/mds/guide.md"} />} />
-          <Route path="/rules" element={<MDR url={"/mds/rules.md"} />} />
-          <Route path="/mods" element={<MDR url={"/mds/mods.md"} />} />
+          <Route index element={<div className="Margin"><MDR url={"/mds/home.md"} /></div>} />
+          <Route path="/guide" element={<div className="Margin"><MDR url={"/mds/guide.md"} /></div>} />
+          <Route path="/rules" element={<div className="Margin"><MDR url={"/mds/rules.md"} /></div>} />
+          <Route path="/mods" element={<div className="Margin"><MDR url={"/mds/mods.md"} /></div>} />
+          <Route path="/map" element={<Map />} />
           <Route path="/discord" element={<Discord />} />
         </Route>
 

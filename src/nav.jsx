@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const Nav = () => {
     const Home   = () => window.location.href = "/";
-    const Map     = () => window.location.href = "http://65.108.18.28:25663";
+    const Map     = () => window.location.href = "/map";
     const Guide   = () => window.location.href = "/guide";
     const Rules   = () => window.location.href = "/rules";
     const Mods    = () => window.location.href = "/mods";
