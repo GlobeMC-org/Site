@@ -13,13 +13,15 @@ const Discord = () => {
   }, []);
 }
 
-const Map = () => {
-  return(
-    <iframe title="dynmap" src="http://65.108.18.28:25663/" style={{width: "100%", height: "100%"}} frameborder="0" />
-  );
-}
+// const Map = () => {
+//   return(
+//     <embed src="https://65.108.18.28:25663/" style={{width: "100%", height: "100%"}} frameborder="0"/>
+//   );
+// }
 
 const App = () => {
+  const Map = () => window.location.href = "http://65.108.18.28:25663/";
+
   return(
     <BrowserRouter>
       <Routes>
