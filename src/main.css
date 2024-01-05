@@ -27,3 +27,23 @@ p {
     font-size: 1.25rem;
     margin: 0.75rem 0 0 0;
 }
+
+pre {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+code {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    line-height: 1.5
+}

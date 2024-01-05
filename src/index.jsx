@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/guide" element={<div className="Margin"><MDR url={"/mds/guide.md"} /></div>} />
           <Route path="/rules" element={<div className="Margin"><MDR url={"/mds/rules.md"} /></div>} />
           <Route path="/mods" element={<div className="Margin"><MDR url={"/mds/mods.md"} /></div>} />
+          <Route path="/eula" element={<div className="Margin"><MDR url={"/mds/eula.md"} /></div>} />
           <Route path="/map" element={<Map />} />
           <Route path="/discord" element={<Discord />} />
         </Route>
